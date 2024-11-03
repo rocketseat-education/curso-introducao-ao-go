@@ -1,9 +1,9 @@
 package main
 
-import (
-	mt "github.com/offellipe/curso-go/meet"
-)
+import "fmt"
 
-func main(){
-	mt.Say("Olá Lais")
+const nome = "lais"
+
+func main() {
+	fmt.Println(nome)
 }
