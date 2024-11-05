@@ -1,11 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	
-	var maior bool = 10 > 5
-	var menor bool = 10 < 5
-	fmt.Println("10 é maior que 5?", maior)
-	fmt.Println("10 é menor que 5?", menor)
+	var hello string = "Olá, mundo!"
+	var question string = "Como vai?"
+
+	//Concatenação
+	var meet = hello + question
+	fmt.Println(meet)
+	fmt.Println(strings.ToUpper(meet))
+	fmt.Println(strings.Contains(meet, "mundo"))
 }
