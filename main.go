@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	var gavetas [2]string
-	gavetas[0] = "copos"
-	gavetas[1] = "panos"
-	fmt.Println(gavetas[1])
+	var gavetas []string
+	gavetas = append(gavetas, "copos", "panos", "pratos")
+	gavetas = gavetas[:2]
+	fmt.Println(gavetas)
 }
