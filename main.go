@@ -2,16 +2,43 @@ package main
 
 import "fmt" //check
 
+type Cliente struct {
+	Nome string
+	Idade int
+	Endereco Endereco
+	Email string
+}
+
+
+type Endereco struct {
+	Rua string
+	Numero int
+	Cep string
+	Estado string
+}
 
 func main() {
 	
-	users := map[string]string{
-		"nome": "Joao",
-		"idade": "30",
+	cliente1 := Cliente{
+		Nome: "lais",
+		Idade: 26,
+		Endereco: Endereco{
+			Rua: "Rua das Flores",
+			Numero: 123,
+			Estado: "SP",
+		},
 	}
 
-	for key, _ := range users {
-		fmt.Println((key))
+	cliente2 := Cliente{
+		Nome: "juan",
+		Idade: 39,
 	}
 
+	cliente2.Email = "juan@google.com"
+
+	fmt.Println(cliente1.Endereco.Numero)
+	cliente1.Endereco.Numero = 124
+	fmt.Println(cliente1.Endereco.Numero)
+
+	fmt.Println(cliente2)
 }
