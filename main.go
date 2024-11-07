@@ -5,8 +5,13 @@ import "fmt" //check
 
 func main() {
 	
-	for {
-		fmt.Println("oiiiii")
+	users := map[string]string{
+		"nome": "Joao",
+		"idade": "30",
+	}
+
+	for key, _ := range users {
+		fmt.Println((key))
 	}
 
 }
