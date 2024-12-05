@@ -2,18 +2,18 @@ package main
 
 import "fmt"
 
-func main() {
-	
-	var fixo = 5
-	multiplica := func(x int) int {
-		return x * fixo
-	}	
-
-	resultado := multiplica(5)
-	fmt.Println(resultado)
-
+type Pessoa struct {
+	Nome string
+	Idade int
 }
 
-func soma(a, b int){
-	//....
+func (p *Pessoa) Apresentar() {
+	p.Nome = "Joana"
+	fmt.Printf("Olá, meu nome é %s e tenho %d anos. \n", p.Nome, p.Idade)
+}
+
+func main (){
+	p1 := Pessoa{Nome: "Lais", Idade:26}
+	p1.Apresentar()
+	fmt.Println(p1.Nome)
 }
