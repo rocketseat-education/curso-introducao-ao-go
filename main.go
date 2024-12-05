@@ -1,18 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
-type Pessoa struct {
-	Nome string
+func exibirMsg() {
+	fmt.Println("Olá de uma goroutine!")
 }
 
-func main (){
-	var p1 Pessoa = Pessoa{Nome: "lais"}
-	var p3 *Pessoa = &p1
-
-	p3.Nome = "Vanessa"
-
-	fmt.Println(p1)
-	fmt.Println(p3)
-
+func main() {
+	go exibirMsg()
+	go exibirMsg()
+	go exibirMsg()
+	time.Sleep(1 * time.Second)
+	fmt.Println("Olá main function!")
 }
